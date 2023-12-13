@@ -11,7 +11,7 @@ Dieses Projekt ist eine für Limesurvey aktualisierte Version der Game-of-Dice T
 ## Inhaltsangabe
 # Table of Contents
 1. **Generelle Struktur**
-2. **Resourcen einfügen**
+2. **Ressourcen einfügen**
 3. **Einstellungen anpassen**
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -33,9 +33,9 @@ Damit diese Fragegruppe funktioniert **MUSS** vorher die unsichtbare Frage in un
 <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## RESOURCEN EINFÜGEN
+## RESSOURCEN EINFÜGEN
 
-Die Dateien aus der ***"Resourcen.zip"*** müssen in den richtigen Ornder Ihrer Limesurvey-Umfrage. <br />
+Die Dateien aus der ***"Ressourcen.zip"*** müssen in den richtigen Ornder Ihrer Limesurvey-Umfrage. <br />
 Sobald ihre Umfrage in Limesurvey erstellt wurde, finden Sie in Ihrem Limesurvey Ordner unter dem Pfad ***"limesurvey\upload\surveys"*** ein Ordner, der als Namen Ihre **SurveyID** hat. <br />
 In diesem Ordner gibt es einen ***"files"*** Ordner. Dort müssen Sie die Dateien einfügen. (Nicht in einem Zusatz Ordner, sondern einzeln direkt dadrin!) <br />
 <br />
