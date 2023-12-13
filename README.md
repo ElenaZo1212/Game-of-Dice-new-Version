@@ -3,8 +3,9 @@
 
 Dieses Projekt ist eine für Limesurvey aktualisierte Version der Game-of-Dice Task.<br />
 <br />
-WICHTIGE vorab Info: In der ersten Frage müssen Sie in den "Source-Code" der Frage gehen, um Einstellungen anpassen zu können. <br />
-Mehr dazu finden Sie unter dem Punkt "Einstellungen anpassen".
+> [!WARNING]
+> **WICHTIGE vorab Info:** In der ersten Frage müssen Sie in den "Source-Code" der Frage gehen, um Einstellungen anpassen zu können. <br />
+> Mehr dazu finden Sie unter dem Punkt **"Einstellungen anpassen"**.
 <br />
 
 ## Inhaltsangabe
