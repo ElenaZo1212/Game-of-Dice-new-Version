@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+ <LimeSurveyDocType>Group</LimeSurveyDocType>
+ <DBVersion>366</DBVersion>
+ <languages>
+  <language>de</language>
+ </languages>
+ <groups>
+  <fields>
+   <fieldname>gid</fieldname>
+   <fieldname>sid</fieldname>
+   <fieldname>group_name</fieldname>
+   <fieldname>group_order</fieldname>
+   <fieldname>description</fieldname>
+   <fieldname>language</fieldname>
+   <fieldname>randomization_group</fieldname>
+   <fieldname>grelevance</fieldname>
+  </fields>
+  <rows>
+   <row>
+    <gid><![CDATA[26]]></gid>
+    <sid><![CDATA[698499]]></sid>
+    <group_name><![CDATA[Instruktionen (2/7)]]></group_name>
+    <group_order><![CDATA[3]]></group_order>
+    <description/>
+    <language><![CDATA[de]]></language>
+    <randomization_group/>
+    <grelevance/>
+   </row>
+  </rows>
+ </groups>
+ <questions>
+  <fields>
+   <fieldname>qid</fieldname>
+   <fieldname>parent_qid</fieldname>
+   <fieldname>sid</fieldname>
+   <fieldname>gid</fieldname>
+   <fieldname>type</fieldname>
+   <fieldname>title</fieldname>
+   <fieldname>question</fieldname>
+   <fieldname>preg</fieldname>
+   <fieldname>help</fieldname>
+   <fieldname>other</fieldname>
+   <fieldname>mandatory</fieldname>
+   <fieldname>question_order</fieldname>
+   <fieldname>language</fieldname>
+   <fieldname>scale_id</fieldname>
+   <fieldname>same_default</fieldname>
+   <fieldname>relevance</fieldname>
+   <fieldname>modulename</fieldname>
+  </fields>
+  <rows>
+   <row>
+    <qid><![CDATA[83]]></qid>
+    <parent_qid><![CDATA[0]]></parent_qid>
+    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[26]]></gid>
+    <type><![CDATA[X]]></type>
+    <title><![CDATA[D1]]></title>
+    <question><![CDATA[<script>
+//Anzeige unterschiedlicher Bilder, je nach digitalem Endgerät
+function setImage() {
+            var image = document.getElementById('gameImage');
+
+            if (window.innerWidth <= 768) {
+                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S3gewinn.jpg";
+            } else {
+                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE3gewinn.jpg";
+            }
+
+            
+        }
+    document.addEventListener('DOMContentLoaded', function ()
+                            {
+                                  setImage();
+                                  window.addEventListener('resize', setImage);
+                            });
+  
+</script>
+<p>Sie können beispielsweise auf eine einzelne Zahl setzen, z.B. die 3, wenn die 3 dann gewürfelt wird, gewinnen Sie 1000 Euro.</p>
+
+<p><img alt="" id="gameImage" style="width: 100%; height: auto;" /></p>
+<style type="text/css">.question-text {
+    font-weight: bold;
+  	font-size: 16px;
+  }
+  #gameImage{
+    border: #31313138;
+    border-width: 2px;
+    border-style: dotted;
+  }
+</style>
+]]></question>
+    <preg/>
+    <help/>
+    <other><![CDATA[N]]></other>
+    <mandatory><![CDATA[N]]></mandatory>
+    <question_order><![CDATA[1]]></question_order>
+    <language><![CDATA[de]]></language>
+    <scale_id><![CDATA[0]]></scale_id>
+    <same_default><![CDATA[0]]></same_default>
+    <relevance><![CDATA[1]]></relevance>
+    <modulename/>
+   </row>
+   <row>
+    <qid><![CDATA[84]]></qid>
+    <parent_qid><![CDATA[0]]></parent_qid>
+    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[26]]></gid>
+    <type><![CDATA[X]]></type>
+    <title><![CDATA[D2]]></title>
+    <question><![CDATA[<script>
+//Anzeige unterschiedlicher Bilder, je nach digitalem Endgerät
+function setImage2() {
+            var image = document.getElementById('gameImage2');
+
+            if (window.innerWidth <= 768) {
+                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S3verlust.jpg";
+            } else {
+                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE3verlust.jpg";
+            }
+
+            
+        }
+    document.addEventListener('DOMContentLoaded', function ()
+                            {
+                                  setImage2();
+                                  window.addEventListener('resize', setImage2);
+                            });
+  
+</script>
+<p>Wenn eine der anderen Zahlen gewürfelt wird, also die 1, 2, 4, 5 oder 6, werden 1000 Euro von Ihrem Guthaben abgezogen</p>
+
+<p><img alt="" id="gameImage2" style="width: 100%; height: auto;" /></p>
+<style type="text/css">
+  #gameImage2{
+    border: #31313138;
+    border-width: 2px;
+    border-style: dotted;
+  }
+</style>
+]]></question>
+    <preg/>
+    <help/>
+    <other><![CDATA[N]]></other>
+    <mandatory><![CDATA[N]]></mandatory>
+    <question_order><![CDATA[2]]></question_order>
+    <language><![CDATA[de]]></language>
+    <scale_id><![CDATA[0]]></scale_id>
+    <same_default><![CDATA[0]]></same_default>
+    <relevance><![CDATA[1]]></relevance>
+    <modulename/>
+   </row>
+  </rows>
+ </questions>
+</document>

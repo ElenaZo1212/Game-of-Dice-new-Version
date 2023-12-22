@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+ <LimeSurveyDocType>Group</LimeSurveyDocType>
+ <DBVersion>366</DBVersion>
+ <languages>
+  <language>de</language>
+ </languages>
+ <groups>
+  <fields>
+   <fieldname>gid</fieldname>
+   <fieldname>sid</fieldname>
+   <fieldname>group_name</fieldname>
+   <fieldname>group_order</fieldname>
+   <fieldname>description</fieldname>
+   <fieldname>language</fieldname>
+   <fieldname>randomization_group</fieldname>
+   <fieldname>grelevance</fieldname>
+  </fields>
+  <rows>
+   <row>
+    <gid><![CDATA[25]]></gid>
+    <sid><![CDATA[698499]]></sid>
+    <group_name><![CDATA[Instruktionen (1/7)]]></group_name>
+    <group_order><![CDATA[2]]></group_order>
+    <description/>
+    <language><![CDATA[de]]></language>
+    <randomization_group/>
+    <grelevance/>
+   </row>
+  </rows>
+ </groups>
+ <questions>
+  <fields>
+   <fieldname>qid</fieldname>
+   <fieldname>parent_qid</fieldname>
+   <fieldname>sid</fieldname>
+   <fieldname>gid</fieldname>
+   <fieldname>type</fieldname>
+   <fieldname>title</fieldname>
+   <fieldname>question</fieldname>
+   <fieldname>preg</fieldname>
+   <fieldname>help</fieldname>
+   <fieldname>other</fieldname>
+   <fieldname>mandatory</fieldname>
+   <fieldname>question_order</fieldname>
+   <fieldname>language</fieldname>
+   <fieldname>scale_id</fieldname>
+   <fieldname>same_default</fieldname>
+   <fieldname>relevance</fieldname>
+   <fieldname>modulename</fieldname>
+  </fields>
+  <rows>
+   <row>
+    <qid><![CDATA[82]]></qid>
+    <parent_qid><![CDATA[0]]></parent_qid>
+    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[25]]></gid>
+    <type><![CDATA[X]]></type>
+    <title><![CDATA[C1]]></title>
+    <question><![CDATA[<script>
+  //Anzeige unterschiedlicher Bilder, je nach digitalem Endgerät
+function setImage() {
+            var image = document.getElementById('gameImage');
+
+            if (window.innerWidth <= 768) {
+                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S.jpg";
+            } else {
+                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE.jpg";
+            }
+  console.log(image.src);
+
+            var abgerufenerWert = sessionStorage.getItem('Rundenanzahl');
+            document.getElementById("Rundenaktualisierung").innerText = abgerufenerWert;
+        }
+    document.addEventListener('DOMContentLoaded', function ()
+                            {
+                                  setImage();
+                                  window.addEventListener('resize', setImage);
+                            });
+</script>
+<p>Im Folgenden machen wir ein Würfelspiel.</p>
+
+<p>Ziel ist es, so viel wie möglich zu gewinnen und so wenig wie möglich zu verlieren.</p>
+
+<p>Ihr Startkapital beträgt 1000 Euro.</p>
+
+<p>Es wird nun <span id="Rundenaktualisierung">...</span> Mal mit einem Würfel gewürfelt und Sie sollen jeweils "raten" was wohl gewürfelt werden wird. Was gewürfelt wird, ist natürlich zufällig. Vor jedem Wurf sollen Sie sich für eine Zahl oder eine Kombination aus mehreren Zahlen entscheiden.</p>
+
+<p>Wenn die Zahl, die gewürfelt wird, mit der von Ihnen gewählten Zahl übereinstimmt bzw. unter der von Ihnen gewählten Zahlenkombination ist, haben Sie gewonnen. Andernfalls haben Sie verloren.</p>
+
+<p><img alt="" id="gameImage" style="width: 100%; height: auto;" /></p>
+
+<div id="Rundenaktualisierung"> </div>
+<style type="text/css">.question-text {
+    font-weight: bold;
+  	font-size: 14px;
+  }
+  #gameImage{
+    border: #31313138;
+    border-width: 2px;
+    border-style: dotted;
+  }
+</style>
+]]></question>
+    <preg/>
+    <help/>
+    <other><![CDATA[N]]></other>
+    <mandatory><![CDATA[N]]></mandatory>
+    <question_order><![CDATA[1]]></question_order>
+    <language><![CDATA[de]]></language>
+    <scale_id><![CDATA[0]]></scale_id>
+    <same_default><![CDATA[0]]></same_default>
+    <relevance><![CDATA[1]]></relevance>
+    <modulename/>
+   </row>
+  </rows>
+ </questions>
+</document>

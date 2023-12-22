@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+ <LimeSurveyDocType>Group</LimeSurveyDocType>
+ <DBVersion>366</DBVersion>
+ <languages>
+  <language>de</language>
+ </languages>
+ <groups>
+  <fields>
+   <fieldname>gid</fieldname>
+   <fieldname>sid</fieldname>
+   <fieldname>group_name</fieldname>
+   <fieldname>group_order</fieldname>
+   <fieldname>description</fieldname>
+   <fieldname>language</fieldname>
+   <fieldname>randomization_group</fieldname>
+   <fieldname>grelevance</fieldname>
+  </fields>
+  <rows>
+   <row>
+    <gid><![CDATA[33]]></gid>
+    <sid><![CDATA[698499]]></sid>
+    <group_name><![CDATA[Game of Dice Task]]></group_name>
+    <group_order><![CDATA[0]]></group_order>
+    <description/>
+    <language><![CDATA[de]]></language>
+    <randomization_group/>
+    <grelevance/>
+   </row>
+  </rows>
+ </groups>
+ <questions>
+  <fields>
+   <fieldname>qid</fieldname>
+   <fieldname>parent_qid</fieldname>
+   <fieldname>sid</fieldname>
+   <fieldname>gid</fieldname>
+   <fieldname>type</fieldname>
+   <fieldname>title</fieldname>
+   <fieldname>question</fieldname>
+   <fieldname>preg</fieldname>
+   <fieldname>help</fieldname>
+   <fieldname>other</fieldname>
+   <fieldname>mandatory</fieldname>
+   <fieldname>question_order</fieldname>
+   <fieldname>language</fieldname>
+   <fieldname>scale_id</fieldname>
+   <fieldname>same_default</fieldname>
+   <fieldname>relevance</fieldname>
+   <fieldname>modulename</fieldname>
+  </fields>
+  <rows>
+   <row>
+    <qid><![CDATA[98]]></qid>
+    <parent_qid><![CDATA[0]]></parent_qid>
+    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[33]]></gid>
+    <type><![CDATA[T]]></type>
+    <title><![CDATA[A1]]></title>
+    <question><![CDATA[<script type="text/javascript">
+  //WICHTIG!!!
+  //BITTE GEBEN SIE HIER DIE ANZAHL DER RUNDEN EIN, DIE GESPIELT WERDEN SOLLEN!
+  var RundenAnzahl = 18; //BSP: var RundenAnzahl = 3;
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //
+  // Wenn sie möchten, können sie die Ergebnisse pro Runde hier anpassen:
+  // Die Zahlen in "RundenErgebnisse" repräsentieren die Ergebnisse für jede Runde in Chronologischer Reihenfolge, getrennt mit einem Komma.
+  var RundenErgebnisse = [3,4,2,1,5,6,2,5,3,4,1,6,6,1,2,5,3,4,1,2,5,6,3,4,5,6,1,2,4,3];
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //BSP: var RundenErgebnisse = [4,5,6]; -> In Runde 1 ist das ergebnis 4, in Runde 2 ist es 5, in Runde 3 ist es 6.
+  //Die voreingegebenen Zahlen sind für bis zu 30 runden nutzbar und bei einer Rundenanzahl von 6/12/18/24/30 taucht jede Zahl gleich oft auf.
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  var Anfangskontostand = 1000;
+
+  //Initiert alle Items im SessionStorage, damit andere functionen immer darauf zugreifen können
+$(document).ready(function() {
+  sessionStorage.setItem('Rundenanzahl', RundenAnzahl);
+  sessionStorage.setItem('RundenergebnisArray', JSON.stringify(RundenErgebnisse));
+  sessionStorage.setItem('kontostand', Anfangskontostand);
+  sessionStorage.setItem('BalanceAddition', null);
+  sessionStorage.setItem('BalanceAdditionProRunde', '[]');
+  sessionStorage.setItem('ButtonAuswahlProRunde', '[]');
+  sessionStorage.setItem('RisikoAuswahlProRunde', '[]');
+  sessionStorage.setItem('GesetzteNummernProRunde', '[]');
+  sessionStorage.setItem('ResultatProRunde', '[]');
+  sessionStorage.setItem('KontostandProRunde', '[]');
+  sessionStorage.setItem('Gewonnen?', false);
+  sessionStorage.setItem('RiskCounter', 0);
+  sessionStorage.setItem('NonRiskCounter', 0);
+
+});
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  //
+  ////Diese funktion ist für den Wilkommenstext
+  function getRundenanzahl()
+  {
+     return RundenAnzahl;
+  }
+  //
+  //
+  //
+  // In den nächsten 4 Zeilen wird diese Frage ausgeblendet, da sie von den Teilnehmern nicht gesehen werden soll!
+  var this_selfId={self.qid};
+  var my_targetQuestion='question' + this_selfId;
+  var questionElement = document.getElementById(my_targetQuestion);
+  questionElement.style.display ="none";
+  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+</script>WICHTIG! ]]></question>
+    <preg/>
+    <help/>
+    <other><![CDATA[N]]></other>
+    <mandatory><![CDATA[N]]></mandatory>
+    <question_order><![CDATA[1]]></question_order>
+    <language><![CDATA[de]]></language>
+    <scale_id><![CDATA[0]]></scale_id>
+    <same_default><![CDATA[0]]></same_default>
+    <relevance><![CDATA[1]]></relevance>
+    <modulename/>
+   </row>
+   <row>
+    <qid><![CDATA[97]]></qid>
+    <parent_qid><![CDATA[0]]></parent_qid>
+    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[33]]></gid>
+    <type><![CDATA[X]]></type>
+    <title><![CDATA[A2]]></title>
+    <question><![CDATA[<p><span style="font-size:14pt"><span style="font-family:Calibri"><span style="color:black">Liebe*r Teilnehmer*in, vielen Dank, dass Sie sich Zeit für diese wissenschaftliche Untersuchung nehmen. Im Verlauf der Studie werden Sie eine digitale Anwendung, die "Game-of-Dice-Task" spielen, bei der in <span id="Rundenaktualisierung">...</span> Runden auf ein Würfelergebnis gesetzt werden soll, mit dem Ziel, das digitale Startkapital zu erhöhen. Die Studie dauert ca. 30 Minuten. Zunächst würden wir Sie bitten, im nächsten Schritt einige Angaben zu machen. Darauf folgend erhalten Sie eine Erklärung, wie das Spiel funktioniert. </span> </span> </span></p>
+
+<div id="Rundenaktualisierung"> </div>
+<script type="text/javascript">
+  //Rundennummer wird aktualiert, je nach angegebener Anzahl der Runden
+  var abgerufenerWert = getRundenanzahl();
+  document.getElementById("Rundenaktualisierung").innerText = abgerufenerWert;
+</script>]]></question>
+    <preg/>
+    <help/>
+    <other><![CDATA[N]]></other>
+    <mandatory><![CDATA[N]]></mandatory>
+    <question_order><![CDATA[2]]></question_order>
+    <language><![CDATA[de]]></language>
+    <scale_id><![CDATA[0]]></scale_id>
+    <same_default><![CDATA[0]]></same_default>
+    <relevance><![CDATA[1]]></relevance>
+    <modulename/>
+   </row>
+  </rows>
+ </questions>
+</document>
