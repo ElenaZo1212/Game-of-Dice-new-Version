@@ -18,8 +18,8 @@
   </fields>
   <rows>
    <row>
-    <gid><![CDATA[34]]></gid>
-    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[1911]]></gid>
+    <sid><![CDATA[361194]]></sid>
     <group_name><![CDATA[Würfelspiel]]></group_name>
     <group_order><![CDATA[9]]></group_order>
     <description/>
@@ -51,10 +51,10 @@
   </fields>
   <rows>
    <row>
-    <qid><![CDATA[99]]></qid>
+    <qid><![CDATA[30046]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[X]]></type>
     <title><![CDATA[Spielstart]]></title>
     <question><![CDATA[<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script><script>
@@ -67,7 +67,7 @@ var gewolltesErgebnis = 0;
 // var gewolltesErgebnis = Math.floor(Math.random() * 6) + 1;
 
 var gewolltesErgebnisFuerPath = JSON.parse(gewolltesErgebnis);
-var VideoPath = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\Ergebnis_" + gewolltesErgebnisFuerPath + ".mp4";
+var VideoPath = "\\upload\\surveys\\"+'{SID}'+"\\files\\Ergebnis_" + gewolltesErgebnisFuerPath + ".mp4";
 var TitleElement = document.querySelector(".group-title");
   TitleElement.innerText = "Runde " + RundenID.toString(10) + " von " + MaxRunden.toString(10);
 
@@ -125,7 +125,7 @@ function StartNextRound()
 	//gewolltesErgebnis = Math.floor(Math.random() * 6) + 1;
 
     gewolltesErgebnisFuerPath = JSON.parse(gewolltesErgebnis);
-    VideoPath = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\Ergebnis_"+gewolltesErgebnisFuerPath+".mp4";
+    VideoPath = "\\upload\\surveys\\"+'{SID}'+"\\files\\Ergebnis_"+gewolltesErgebnisFuerPath+".mp4";
   }
   //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   //
@@ -161,10 +161,10 @@ function StartNextRound()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[100]]></qid>
+    <qid><![CDATA[30047]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[X]]></type>
     <title><![CDATA[Spiel]]></title>
     <question><![CDATA[<style type="text/css">/* Es gibt 2 Style Divisionen im Script. Diese ist hauptsächlich für die Anzeige und inklusion der Würfel. Die Untere ist auschließlich für Würfel. */
@@ -597,7 +597,7 @@ display:flex;
   {
     //Just replacing the source didnt work, therefore im replacing the player
     var videoPlayerId = document.getElementById("videoPlayer");
-    var shakeVideoPlayer = createStyledVideo("\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\wuerfelvideo.mp4");
+    var shakeVideoPlayer = createStyledVideo("\\upload\\surveys\\"+'{SID}'+"\\files\\wuerfelvideo.mp4");
 
     shakeVideoPlayer.autoplay = true;
     shakeVideoPlayer.loop = true;
@@ -624,13 +624,14 @@ display:flex;
    resultVideoPlayer.addEventListener('ended', VideoEnded);
    videoPlayerId.innerHTML = '';
    videoPlayerId.appendChild(resultVideoPlayer);
-
+EvaluateChoice();
   }
   //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   //
   //3000 millisekunden nachdem das Video fertig ist, wird die nächste Runde eingeleitet
   function VideoEnded()
   {
+
   	var delayInMilliseconds = 3000;
   	setTimeout(function () {
 			ChangeVideoToDice();
@@ -676,7 +677,6 @@ display:flex;
         SaveButtonChoice();
         SaveBetChoice();
         SaveChosenNumberChoice();
-        EvaluateChoice();
         disableAllButtons();
         ChangeVideoToResult();
     	SaveCurrentDiceResult();
@@ -975,7 +975,7 @@ display:flex;
   function SetButtonImages()
   {
 	btnSuccessArray.forEach(function(element) {
-    	var Path =  "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\"+ element.id +".png"
+    	var Path =  "\\upload\\surveys\\"+'{SID}'+"\\files\\"+ element.id +".png"
     	var imgElement = element.querySelector('img');
     	if (imgElement) 
     	{
@@ -987,9 +987,9 @@ display:flex;
   
 
   var nChartImage = document.getElementById('negativeSign');
-  nChartImage.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\kontoMinus.png";
+  nChartImage.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\kontoMinus.png";
   var pChartImage = document.getElementById('positiveSign');
-  pChartImage.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\kontoPlus.png";
+  pChartImage.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\kontoPlus.png";
   
   
   var maxRunden = parseInt(sessionStorage.getItem('Rundenanzahl'));
@@ -1082,10 +1082,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[101]]></qid>
+    <qid><![CDATA[30048]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[T]]></type>
     <title><![CDATA[SoundFeld]]></title>
     <question><![CDATA[<audio controls="" id="audioPlayerRight"> </audio>
@@ -1095,8 +1095,8 @@ display:flex;
 
   var audioPlayerRight = document.getElementById("audioPlayerRight");
   var audioPlayerWrong = document.getElementById("audioPlayerWrong");
-  audioPlayerRight.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\Correct.wav";
-  audioPlayerWrong.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\False.wav";
+  audioPlayerRight.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\Correct.wav";
+  audioPlayerWrong.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\False.wav";
   
   //Spielt die Audiodatei ab
   function PlayWinAudio()
@@ -1134,10 +1134,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[102]]></qid>
+    <qid><![CDATA[30049]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[ButtonChoiceProRunde]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1176,10 +1176,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[103]]></qid>
+    <qid><![CDATA[30050]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[WetteinsatzProRunde]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1218,10 +1218,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[104]]></qid>
+    <qid><![CDATA[30051]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[ChosenNumberProRunde]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1260,10 +1260,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[105]]></qid>
+    <qid><![CDATA[30052]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[EvaluationProRunde]]></title>
     <question><![CDATA[<script>
@@ -1328,10 +1328,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[106]]></qid>
+    <qid><![CDATA[30053]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[T]]></type>
     <title><![CDATA[KontostandProRunde]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1367,10 +1367,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[107]]></qid>
+    <qid><![CDATA[30054]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[GewinnProRunde]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1406,10 +1406,10 @@ display:flex;
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[108]]></qid>
+    <qid><![CDATA[30055]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[T]]></type>
     <title><![CDATA[Spielende]]></title>
     <question><![CDATA[<script>
@@ -1446,10 +1446,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[109]]></qid>
+    <qid><![CDATA[30056]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[FinalerKontostand]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1482,10 +1482,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[110]]></qid>
+    <qid><![CDATA[30057]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[Anzahl1000]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1553,10 +1553,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[111]]></qid>
+    <qid><![CDATA[30058]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[Anzahl500]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1600,10 +1600,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[112]]></qid>
+    <qid><![CDATA[30059]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[Anzahl200]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1647,10 +1647,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[113]]></qid>
+    <qid><![CDATA[30060]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[Anzahl100]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1694,10 +1694,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[114]]></qid>
+    <qid><![CDATA[30061]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[AnzahlRiskant]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1742,10 +1742,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[115]]></qid>
+    <qid><![CDATA[30062]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[AnzahlNichtRiskant]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1790,10 +1790,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[116]]></qid>
+    <qid><![CDATA[30063]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[RisikoNettoScore]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1833,10 +1833,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[117]]></qid>
+    <qid><![CDATA[30064]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[Rundenanzahl]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>
@@ -1873,10 +1873,10 @@ function GoToNextQuestion()
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[118]]></qid>
+    <qid><![CDATA[30065]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[34]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1911]]></gid>
     <type><![CDATA[S]]></type>
     <title><![CDATA[ErgebnisProRunde]]></title>
     <question><![CDATA[<meta charset="UTF-8"><meta name="viewport2" content="width=device-width, initial-scale=1.0"><script>

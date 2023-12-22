@@ -18,8 +18,8 @@
   </fields>
   <rows>
    <row>
-    <gid><![CDATA[30]]></gid>
-    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[1909]]></gid>
+    <sid><![CDATA[361194]]></sid>
     <group_name><![CDATA[Instruktionen (6/7)]]></group_name>
     <group_order><![CDATA[7]]></group_order>
     <description/>
@@ -51,10 +51,10 @@
   </fields>
   <rows>
    <row>
-    <qid><![CDATA[91]]></qid>
+    <qid><![CDATA[30044]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[30]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1909]]></gid>
     <type><![CDATA[X]]></type>
     <title><![CDATA[H1]]></title>
     <question><![CDATA[<script>
@@ -63,9 +63,9 @@ function setImage() {
             var image = document.getElementById('gameImage');
 
             if (window.innerWidth <= 768) {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\S.jpg";
             } else {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\DE.jpg";
             }
 
 

@@ -18,11 +18,14 @@
   </fields>
   <rows>
    <row>
-    <gid><![CDATA[31]]></gid>
-    <sid><![CDATA[698499]]></sid>
-    <group_name><![CDATA[Instruktionen (7/7)]]></group_name>
-    <group_order><![CDATA[8]]></group_order>
-    <description/>
+    <gid><![CDATA[1907]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <group_name><![CDATA[Instruktionen (5/7)]]></group_name>
+    <group_order><![CDATA[6]]></group_order>
+    <description><![CDATA[<p> </p>
+
+<p> </p>
+]]></description>
     <language><![CDATA[de]]></language>
     <randomization_group/>
     <grelevance/>
@@ -51,52 +54,38 @@
   </fields>
   <rows>
    <row>
-    <qid><![CDATA[92]]></qid>
+    <qid><![CDATA[30039]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[31]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1907]]></gid>
     <type><![CDATA[X]]></type>
-    <title><![CDATA[I1]]></title>
+    <title><![CDATA[G1]]></title>
     <question><![CDATA[<script>
 //Anzeige unterschiedlicher Bilder, je nach digitalem Endgerät
 function setImage() {
             var image = document.getElementById('gameImage');
 
             if (window.innerWidth <= 768) {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\S1234gewinn.jpg";
             } else {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\DE1234gewinn.jpg";
             }
 
-            var abgerufenerWert = sessionStorage.getItem('Rundenanzahl');
-            document.getElementById("Rundenaktualisierung").innerText = abgerufenerWert;
+            
         }
     document.addEventListener('DOMContentLoaded', function ()
                             {
                                   setImage();
                                   window.addEventListener('resize', setImage);
                             });
-
-    var abgerufenerWert = sessionStorage.getItem('Rundenanzahl');
-  document.getElementById("Rundenaktualisierung").innerText = abgerufenerWert;
-</script><u>Zusammenfassung:</u>
-<div id="Text">
-<ul>
-	<li>es wird <span id="Rundenaktualisierung">...</span> Mal mit einem Würfel gewürfelt.</li>
-	<li>vor jedem Wurf wird eine Zahl oder Zahlenkombination gewählt.</li>
-	<li>bei Übereinstimmung der gewählten Zahl oder der gewählten Zahlenkombination mit dem Gewürfelten gewinnen Sie den entsprechenden Betrag, bei nicht-Übereinstimmung verlieren Sie den entsprechenden Betrag.</li>
-	<li>auch bei Schulden kann weitergespielt werden</li>
-	<li>die Anzeigen verdeutlichen den aktuellen Kontostand und den aktuellen Gewinn oder Verlust</li>
-	<li>Ziel ist es so viel Geld wie möglich zu gewinnen und so wenig Geld wie möglich zu verlieren.</li>
-</ul>
-</div>
+  
+</script>
+<p>Wenn Sie auf vier Zahlen gleichzeitig setzen, z.B. 1, 2, 3, und 4 gewinnen Sie 100 Euro, wenn die gewürfelte Zahl eine 1, 2, 3 oder 4 ist.</p>
 
 <p><img alt="" id="gameImage" style="width: 100%; height: auto;" /></p>
-
-<div id="Rundenaktualisierung"> </div>
 <style type="text/css">.question-text {
     font-weight: bold;
-  	font-size: 14px;
+  	font-size: 16px;
   }
   #gameImage{
     border: #31313138;
@@ -110,6 +99,54 @@ function setImage() {
     <other><![CDATA[N]]></other>
     <mandatory><![CDATA[N]]></mandatory>
     <question_order><![CDATA[1]]></question_order>
+    <language><![CDATA[de]]></language>
+    <scale_id><![CDATA[0]]></scale_id>
+    <same_default><![CDATA[0]]></same_default>
+    <relevance><![CDATA[1]]></relevance>
+    <modulename/>
+   </row>
+   <row>
+    <qid><![CDATA[30040]]></qid>
+    <parent_qid><![CDATA[0]]></parent_qid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1907]]></gid>
+    <type><![CDATA[X]]></type>
+    <title><![CDATA[G2]]></title>
+    <question><![CDATA[<script>
+//Anzeige unterschiedlicher Bilder, je nach digitalem Endgerät
+function setImage2() {
+            var image = document.getElementById('gameImage2');
+
+            if (window.innerWidth <= 768) {
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\S1234verlust.jpg";
+            } else {
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\DE1234verlust.jpg";
+            }
+
+           
+        }
+    document.addEventListener('DOMContentLoaded', function ()
+                            {
+                                  setImage2();
+                                  window.addEventListener('resize', setImage2);
+                            });
+  
+</script>
+<p>Wenn eine der anderen Zahlen gewürfelt wird, also die 5 oder 6 verlieren Sie 100 Euro.</p>
+
+<p><img alt="" id="gameImage2" style="width: 100%; height: auto;" /></p>
+<style type="text/css">#gameImage2{
+    border: #31313138;
+    border-width: 2px;
+    border-style: dotted;
+  }
+</style>
+]]></question>
+    <preg/>
+    <help/>
+    <other><![CDATA[N]]></other>
+    <mandatory><![CDATA[N]]></mandatory>
+    <question_order><![CDATA[2]]></question_order>
     <language><![CDATA[de]]></language>
     <scale_id><![CDATA[0]]></scale_id>
     <same_default><![CDATA[0]]></same_default>

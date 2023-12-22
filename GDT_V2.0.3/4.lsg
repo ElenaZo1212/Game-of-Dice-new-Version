@@ -18,8 +18,8 @@
   </fields>
   <rows>
    <row>
-    <gid><![CDATA[26]]></gid>
-    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[1904]]></gid>
+    <sid><![CDATA[361194]]></sid>
     <group_name><![CDATA[Instruktionen (2/7)]]></group_name>
     <group_order><![CDATA[3]]></group_order>
     <description/>
@@ -51,10 +51,10 @@
   </fields>
   <rows>
    <row>
-    <qid><![CDATA[83]]></qid>
+    <qid><![CDATA[30033]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[26]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1904]]></gid>
     <type><![CDATA[X]]></type>
     <title><![CDATA[D1]]></title>
     <question><![CDATA[<script>
@@ -63,9 +63,9 @@ function setImage() {
             var image = document.getElementById('gameImage');
 
             if (window.innerWidth <= 768) {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S3gewinn.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\S3gewinn.jpg";
             } else {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE3gewinn.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\DE3gewinn.jpg";
             }
 
             
@@ -103,10 +103,10 @@ function setImage() {
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[84]]></qid>
+    <qid><![CDATA[30034]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[26]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1904]]></gid>
     <type><![CDATA[X]]></type>
     <title><![CDATA[D2]]></title>
     <question><![CDATA[<script>
@@ -115,9 +115,9 @@ function setImage2() {
             var image = document.getElementById('gameImage2');
 
             if (window.innerWidth <= 768) {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\S3verlust.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\S3verlust.jpg";
             } else {
-                image.src = "\\limesurvey\\upload\\surveys\\"+'{SID}'+"\\files\\DE3verlust.jpg";
+                image.src = "\\upload\\surveys\\"+'{SID}'+"\\files\\DE3verlust.jpg";
             }
 
             
@@ -132,8 +132,7 @@ function setImage2() {
 <p>Wenn eine der anderen Zahlen gewürfelt wird, also die 1, 2, 4, 5 oder 6, werden 1000 Euro von Ihrem Guthaben abgezogen</p>
 
 <p><img alt="" id="gameImage2" style="width: 100%; height: auto;" /></p>
-<style type="text/css">
-  #gameImage2{
+<style type="text/css">#gameImage2{
     border: #31313138;
     border-width: 2px;
     border-style: dotted;

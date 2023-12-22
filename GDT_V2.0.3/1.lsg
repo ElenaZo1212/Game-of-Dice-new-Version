@@ -18,8 +18,8 @@
   </fields>
   <rows>
    <row>
-    <gid><![CDATA[33]]></gid>
-    <sid><![CDATA[698499]]></sid>
+    <gid><![CDATA[1901]]></gid>
+    <sid><![CDATA[361194]]></sid>
     <group_name><![CDATA[Game of Dice Task]]></group_name>
     <group_order><![CDATA[0]]></group_order>
     <description/>
@@ -51,10 +51,10 @@
   </fields>
   <rows>
    <row>
-    <qid><![CDATA[98]]></qid>
+    <qid><![CDATA[30025]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[33]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1901]]></gid>
     <type><![CDATA[T]]></type>
     <title><![CDATA[A1]]></title>
     <question><![CDATA[<script type="text/javascript">
@@ -133,10 +133,10 @@ $(document).ready(function() {
     <modulename/>
    </row>
    <row>
-    <qid><![CDATA[97]]></qid>
+    <qid><![CDATA[30026]]></qid>
     <parent_qid><![CDATA[0]]></parent_qid>
-    <sid><![CDATA[698499]]></sid>
-    <gid><![CDATA[33]]></gid>
+    <sid><![CDATA[361194]]></sid>
+    <gid><![CDATA[1901]]></gid>
     <type><![CDATA[X]]></type>
     <title><![CDATA[A2]]></title>
     <question><![CDATA[<p><span style="font-size:14pt"><span style="font-family:Calibri"><span style="color:black">Liebe*r Teilnehmer*in, vielen Dank, dass Sie sich Zeit für diese wissenschaftliche Untersuchung nehmen. Im Verlauf der Studie werden Sie eine digitale Anwendung, die "Game-of-Dice-Task" spielen, bei der in <span id="Rundenaktualisierung">...</span> Runden auf ein Würfelergebnis gesetzt werden soll, mit dem Ziel, das digitale Startkapital zu erhöhen. Die Studie dauert ca. 30 Minuten. Zunächst würden wir Sie bitten, im nächsten Schritt einige Angaben zu machen. Darauf folgend erhalten Sie eine Erklärung, wie das Spiel funktioniert. </span> </span> </span></p>
